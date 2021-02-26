@@ -49,18 +49,18 @@ header {
 }
 
 nav {
-    width: 60%;
+    width: 85%;
     display: flex;
     flex-direction: row;
     position: fixed;
     top: 0;
-    /* right: 0; */
     padding: 0px 15px 0px 0px;
 }
 
 .nav-items {
     display: flex;
     justify-content: space-between;
+    width: 70%;
 }
 
 h1 {
@@ -70,9 +70,13 @@ h1 {
     color: OliveDrab;
 }
 
+h1:nth-of-type(2) {
+    line-height: 1;
+}
+
 
 nav > div {
-    flex: 1;
+    /* flex: 1; */
     padding: 10px 10px 30px 10px;
     background-image: linear-gradient(rgba(255,255,255,1) 80%, rgba(255,255,255,0));
 }
@@ -92,9 +96,13 @@ nav > div a {
     text-decoration: none;
 }
 
+/* section {
+    overflow-x: hidden;
+} */
+
 
 .top {
-    padding-bottom: 40px;
+    padding-bottom: 25px;
 }
 
 .content {
@@ -146,55 +154,14 @@ h3 {
     font-weight: 700;
 }
 
-#schedule {
+/* #schedule {
     min-width: 600px;
-}
+} */
 
 #schedule a {
     color: #000;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 10% 50% 40%;
-    background-color: black;
-    grid-gap: 1px;
-    border: 1px solid #000;
-}
-
-.item.col-head {
-    text-align: center;
-    text-transform: uppercase;
-    padding: 0;
-}
-
-.item.hw {
-    margin-right: 2px;
-}
-
-.item {
-    background-color: #fff;
-    padding: 10px 40px;
-}
-
-.item-span {
-    grid-column: 2 / span 2;
-    text-transform: uppercase;
-    margin-right: 2px;
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.date {
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item.date {
-    padding: 0;
-}
 
 .syl-text {
     display: none;
@@ -265,7 +232,11 @@ li {
     }
 
     .top {
-        padding-bottom: 10px;
+        padding-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 15px;
     }
 
     .mobi-col {
@@ -298,18 +269,20 @@ li {
         width: 100%;
         flex-direction: row;
         background-image: linear-gradient(rgba(255,255,255,1) 75%, rgba(255,255,255,0));
-        height: 40px;
+        height: 49px;
         overflow: hidden;
+        left: 0;
     }
 
     nav.open {
-        padding: 0 10px 60px 10px;
+        padding: 0 10px 75px 10px;
         height: auto;
     }
 
     nav > div {
         padding: unset;
         background: none;
+        flex: 1;
     }
 
     nav > div a {
@@ -324,6 +297,10 @@ li {
         display: block;
     }
 
+    .nav-items > .top {
+        padding-bottom: 10px;
+    }
+
     .nav-items > div {
         padding-bottom: 3px;
     }
@@ -334,6 +311,15 @@ li {
 
     .menu h1 {
         color: #000;
+    }
+
+    .menu h1::after {
+        content: '';
+        padding-top: 100%;
+    }
+
+    .first {
+        line-height: 1;
     }
 
 
@@ -359,19 +345,4 @@ li {
         margin-bottom: 15px;
     }
 
-    #schedule p {
-        font-size: 17px;
-    }
-
-    .item {
-        padding: 10px 15px;
-    }
-
-    .date {
-        font-size: 17px;
-    }
-
-    .grid-container {
-        margin-right: 10px;
-    }
 }

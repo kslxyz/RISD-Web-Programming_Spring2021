@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $("html,body").animate({scrollTop: 0}, 100);
     if (window.matchMedia('(min-width: 768px)').matches) {
-        $(".sec").css("margin-top", $("nav").outerHeight()+10);
+        $(".sec").css("margin-top", $("nav").outerHeight()+22);
 
         $(".left").css({
             "height": $(".right").height()-5,
@@ -17,17 +17,17 @@ $(document).ready(function() {
         $(".menu").click(function() {
             if($("nav").hasClass("open")) {
                 $("nav").removeClass("open");
-                $(".menu h1").text("Menu +");
+                $(".menu h1").html("Menu +<br>");
             } else {
                 $("nav").addClass("open");
-                $(".menu h1").text("Menu —");
+                $(".menu h1").html("Menu —<br>");
             }
 
         })
 
         $("nav a").click(function() {
             $("nav").removeClass("open");
-            $(".menu h1").text("Menu +");
+            $(".menu h1").html("Menu +<br>");
         });
     }
 
