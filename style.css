@@ -52,6 +52,7 @@ nav {
     position: fixed;
     top: 0;
     padding: 0px 15px 0px 0px;
+    background-image: linear-gradient(rgba(255,255,255,1) 80%, rgba(255,255,255,0));
 }
 
 .nav-items {
@@ -75,7 +76,6 @@ h1:nth-of-type(2) {
 nav > div {
     /* flex: 1; */
     padding: 10px 10px 30px 10px;
-    background-image: linear-gradient(rgba(255,255,255,1) 80%, rgba(255,255,255,0));
 }
 
 nav > div:first-of-type {
